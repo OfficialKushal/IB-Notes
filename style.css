@@ -1,18 +1,28 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
 /* Global Styles */
 body {
     margin: 40px auto;
-    max-width: 750px;
-    line-height: 1.6;
-    font-size: 18px;
+    max-width: 800px;
     font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
     color: #333;
     background-color: #fafafa;
-    padding: 0 20px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Paragraphs */
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
+}
+
+/* Paragraph Styling */
 p {
-    margin: 1em 0;
+    margin-bottom: 1rem;
 }
 
 /* Images */
@@ -21,7 +31,7 @@ img {
     max-width: 100%;
     height: auto;
     margin: 20px auto;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -58,4 +68,60 @@ table tr:nth-child(even) {
 table tr:hover {
     background-color: #e3f2fd;
     transition: background-color 0.3s ease;
+}
+
+/* Dark Mode Table */
+body.dark-mode table {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark-mode table thead {
+    background-color: #0077b6;
+}
+
+body.dark-mode table tr:nth-child(even) {
+    background-color: #333;
+}
+
+body.dark-mode table tr:hover {
+    background-color: #444;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #0077b6;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background-color: #005f8f;
+}
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+#dark-mode-toggle:hover {
+    background: #005f8f;
 }
